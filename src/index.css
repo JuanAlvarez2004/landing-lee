@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+:root {
+  --color-black: #1A191C;
+  --color-white: #E6E3E4;
+  --color-green: #2B695D;
+  --color-skin: #F6C3A7;
+  --color-pink: #9F4049;
+}
+
+@theme {
+  --font-picnic: 'Picnic', system-ui, sans-serif;
+  --font-satoshi: 'Satoshi-Variable', system-ui, sans-serif;
+  --font-satoshi-italic: 'Satoshi-VariableItalic', system-ui, sans-serif;
+}
+
+@font-face {
+  font-family: 'Picnic';
+  src: url('/fonts/PicNic.woff2') format('woff2');
+  font-weight: 200 900;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Satoshi-Variable';
+  src: url('/fonts/Satoshi-Variable.woff2') format('woff2');
+  font-weight: 200 900;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Satoshi-VariableItalic';
+  src: url('/fonts/Satoshi-VariableItalic.woff2') format('woff2');
+  font-weight: 200 900;
+  font-display: swap;
+  font-style: italic;
+}
+
+/* Cambiar el color de selección en toda la página */
+/* ::selection {
+  background-color: #000; 
+  color: #fff;            
+} */
+
+/* Para navegadores Firefox (opcional, pero recomendado) */
+/* ::-moz-selection {
+  background-color: #000; 
+  color: #fff;           
+} */
+
+/* Optimizaciones de performance */
+html {
+  scroll-behavior: smooth;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+html {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+body {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
