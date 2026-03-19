@@ -1,17 +1,22 @@
 @import "tailwindcss";
 
-:root {
+/* :root {
   --color-black: #1A191C;
   --color-white: #E6E3E4;
   --color-green: #2B695D;
   --color-skin: #F6C3A7;
   --color-pink: #9F4049;
-}
+} */
 
 @theme {
   --font-picnic: 'Picnic', system-ui, sans-serif;
   --font-satoshi: 'Satoshi-Variable', system-ui, sans-serif;
   --font-satoshi-italic: 'Satoshi-VariableItalic', system-ui, sans-serif;
+  --color-own-black: #1A191C;
+  --color-own-white: #E6E3E4;
+  --color-own-green: #2B695D;
+  --color-own-skin: #F6C3A7;
+  --color-own-pink: #9F4049;
 }
 
 @font-face {
@@ -21,6 +26,7 @@
   font-display: swap;
   font-style: normal;
 }
+
 @font-face {
   font-family: 'Satoshi-Variable';
   src: url('/fonts/Satoshi-Variable.woff2') format('woff2');
@@ -28,6 +34,7 @@
   font-display: swap;
   font-style: normal;
 }
+
 @font-face {
   font-family: 'Satoshi-VariableItalic';
   src: url('/fonts/Satoshi-VariableItalic.woff2') format('woff2');
@@ -58,11 +65,15 @@ html {
 
 /* Hide scrollbar for IE, Edge and Firefox */
 html {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
 }
 
 body {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
 }

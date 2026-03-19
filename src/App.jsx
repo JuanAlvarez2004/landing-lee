@@ -1,6 +1,7 @@
 import { useRef, useEffect } from 'react'
 import gsap from 'gsap'
 import { ReactLenis } from 'lenis/react'
+import Starting from '@pages/Starting'
 
 function App() {
   const lenisRef = useRef()
@@ -16,10 +17,12 @@ function App() {
   }, [])
 
   return (
-    <main className='h-[300dvh]'>
+    <>
       <ReactLenis root options={{ autoRaf: false }} ref={lenisRef} />
-      <h1 className='font-picnic text-9xl'>hola</h1>
-    </main>
+      <main className='relative h-[300dvh]'>
+        <Starting />
+      </main>
+    </>
   )
 }
 
