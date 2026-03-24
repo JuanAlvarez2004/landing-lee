@@ -3,6 +3,7 @@ import gsap from 'gsap'
 import { ReactLenis } from 'lenis/react'
 import Starting from '@components/Starting'
 import BentoMatriz from '@components/BentoMatriz'
+import Lotus from '@components/Lotus'
 
 function App() {
   const lenisRef = useRef()
@@ -25,6 +26,7 @@ function App() {
         <main className='m-8'>
           <BentoMatriz />
         </main>
+        <Lotus />
       </div>
     </>
   )
