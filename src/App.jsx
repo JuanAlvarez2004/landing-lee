@@ -1,7 +1,8 @@
 import { useRef, useEffect } from 'react'
 import gsap from 'gsap'
 import { ReactLenis } from 'lenis/react'
-import Starting from '@pages/Starting'
+import Starting from '@components/Starting'
+import BentoMatriz from '@components/BentoMatriz'
 
 function App() {
   const lenisRef = useRef()
@@ -19,8 +20,9 @@ function App() {
   return (
     <>
       <ReactLenis root options={{ autoRaf: false }} ref={lenisRef} />
-      <main className='relative h-[300dvh]'>
+      <main className='flex flex-col gap-8 m-8 relative'>
         <Starting />
+        <BentoMatriz />
       </main>
     </>
   )

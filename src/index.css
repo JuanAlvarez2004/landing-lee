@@ -1,13 +1,5 @@
 @import "tailwindcss";
 
-/* :root {
-  --color-black: #1A191C;
-  --color-white: #E6E3E4;
-  --color-green: #2B695D;
-  --color-skin: #F6C3A7;
-  --color-pink: #9F4049;
-} */
-
 @theme {
   --font-picnic: 'Picnic', system-ui, sans-serif;
   --font-satoshi: 'Satoshi-Variable', system-ui, sans-serif;
@@ -72,6 +64,7 @@ html {
 }
 
 body {
+  font-family: var(--font-satoshi);
   -ms-overflow-style: none;
   /* IE and Edge */
   scrollbar-width: none;
