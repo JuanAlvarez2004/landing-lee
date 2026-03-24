@@ -20,10 +20,12 @@ function App() {
   return (
     <>
       <ReactLenis root options={{ autoRaf: false }} ref={lenisRef} />
-      <main className='flex flex-col gap-8 m-8 relative'>
+      <div className='flex flex-col gap-8 relative'>
         <Starting />
-        <BentoMatriz />
-      </main>
+        <main className='m-8'>
+          <BentoMatriz />
+        </main>
+      </div>
     </>
   )
 }
