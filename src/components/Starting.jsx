@@ -10,10 +10,9 @@ function Starting() {
     const boxImage = document.querySelector("#box-title img")
     const tl = gsap.timeline({ ease: "power2.out" })
     const rectFirstTitle = firstTitle.getBoundingClientRect()
-    console.log(rectFirstTitle)
 
     gsap.set(boxImage, { opacity: .1 })
-    gsap.set(secondTitle, { y: -rectFirstTitle.width / 2 + 40, opacity: 0 })
+    gsap.set(secondTitle, { y: -rectFirstTitle.width / 2 + 30, opacity: 0 })
 
     tl
       .fromTo(boxTitle, {
