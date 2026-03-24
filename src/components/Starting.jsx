@@ -13,7 +13,7 @@ function Starting() {
     console.log(rectFirstTitle)
 
     gsap.set(boxImage, { opacity: .1 })
-    gsap.set(secondTitle, { y: -rectFirstTitle.width / 2 + 15 })
+    gsap.set(secondTitle, { y: -rectFirstTitle.width / 2 + 40, opacity: 0 })
 
     tl
       .fromTo(boxTitle, {
@@ -21,34 +21,34 @@ function Starting() {
         transformOrigin: "center center",
       }, {
         scaleY: 1,
-        duration: 1,
+        duration: 0.8,
         ease: "power3.inOut",
       })
       .from(firstTitle, {
         opacity: 0,
-        duration: 0.3,
+        duration: 0.4,
         ease: "power2.in",
       }, "-=0.5")
-      .from(secondTitle, {
-        y: -80,
-        opacity: 0,
-        ease: "power2.in",
-        duration: 0.3,
-        delay: 0.5,
+      .to(secondTitle, {
+        // y: 0,
+        opacity: 1,
+        duration: 0.5,
+        delay: 0.75,
       })
       .to(secondTitle, {
         y: 0,
         duration: 0.3,
+        delay: 0.5,
       })
       .to(firstTitle, {
         opacity: 0,
-        y: 40,
-        duration: 0.25,
-      }, "-=0.2")
+        y: 80,
+        duration: 0.3,
+      }, "<")
       .from(boxImage, {
         opacity: 0,
         duration: 1,
-      }, "-=0.2")
+      }, "-=0.3")
 
     return () => {
       tl.kill()
