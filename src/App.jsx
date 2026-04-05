@@ -1,4 +1,4 @@
-import { useRef, useEffect } from 'react'
+import { useRef, useEffect, useState, useCallback } from 'react'
 import gsap from 'gsap'
 import { ReactLenis } from 'lenis/react'
 import Starting from '@components/Starting'
@@ -7,6 +7,11 @@ import Lotus from '@components/Lotus'
 
 function App() {
   const lenisRef = useRef()
+  const [isStartingComplete, setIsStartingComplete] = useState(false)
+
+  const handleStartingComplete = useCallback(() => {
+    setIsStartingComplete(true)
+  }, [])
 
   useEffect(() => {
     function update(time) {
@@ -22,11 +27,11 @@ function App() {
     <>
       <ReactLenis root options={{ autoRaf: false }} ref={lenisRef} />
       <div className='flex flex-col gap-8 relative overflow-x-clip'>
-        <Starting />
+        <Starting onAnimationComplete={handleStartingComplete} />
         <main className='m-8'>
           <BentoMatriz />
         </main>
-        <Lotus />
+        {isStartingComplete && <Lotus />}
       </div>
     </>
   )

@@ -2,7 +2,7 @@ import { gsap } from "gsap"
 import { useGSAP } from "@gsap/react"
 import faceLee from '@assets/outline-lee.png'
 
-function Starting() {
+function Starting({ onAnimationComplete }) {
   useGSAP(() => {
     const firstTitle = document.querySelector("#first-title")
     const secondTitle = document.querySelector("#second-title")
@@ -49,10 +49,14 @@ function Starting() {
         duration: 1,
       }, "-=0.3")
 
+    if (onAnimationComplete) {
+      tl.eventCallback("onComplete", onAnimationComplete)
+    }
+
     return () => {
       tl.kill()
     }
-  }, [])
+  }, [onAnimationComplete])
 
   return (
     <section className="h-dvh grid place-content-center relative text-own-white">
